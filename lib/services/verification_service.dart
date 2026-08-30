@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import '../models/verification_result.dart';
 
 class VerificationService {
-  static const String baseUrl = "http://10.0.2.2:5287";
+  static const String baseUrl = "https://verificationapi-smti.onrender.com/";
 
   Future<VerificationResult> createVerification() async {
     final response = await http.post(Uri.parse("$baseUrl/createVerification"));
