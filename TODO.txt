@@ -1,0 +1,21 @@
+4. Rate-limit the API
+
+This is particularly important for your verification system.
+
+Someone shouldn't be able to hammer:
+
+/createVerification
+
+thousands of times.
+
+You could eventually enforce limits such as:
+
+Maximum verification requests
+    ↓
+per IP
+per account/device
+per time period
+
+and similarly limit /checkCode.
+Note: We can do this in app code - limit codes. we need to save the last time they entered
+a code, maybe using a text file of current time.
